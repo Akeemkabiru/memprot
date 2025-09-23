@@ -1,9 +1,10 @@
 import React from "react";
+import { BsSearch } from "react-icons/bs";
 import { HiDatabase, HiSearch } from "react-icons/hi";
 
 export default function ProteinSearch() {
   return (
-    <div className="w-[300px] p-3 bg-gray-500/20 space-y-4 rounded-lg">
+    <div className="w-[300px] p-3 bg-gray-500/20 space-y-4 rounded-lg border-gray-400/50 border">
       <div className="flex items-center gap-2">
         <HiDatabase size={24} />
         <h2 className="font-semibold text-xl"> Structure Search</h2>
@@ -17,8 +18,8 @@ export default function ProteinSearch() {
             placeholder="e.g., 10KC, 3R"
             className="border w-full border-gray-400 h-9 px-2 focus:outline-none rounded-md placeholder:text-gray-400"
           />
-          <div className="bg-[#ff7043] rounded-md p-1.5">
-            <HiSearch size={22} />
+          <div className="bg-[#ff7043] rounded-md p-2.5">
+            <BsSearch size={16} />
           </div>
         </div>
       </form>

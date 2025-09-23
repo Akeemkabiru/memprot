@@ -1,10 +1,10 @@
 import React from "react";
+import { BsBook, BsPeople } from "react-icons/bs";
 import { GiAtomicSlashes } from "react-icons/gi";
-import { HiUsers } from "react-icons/hi";
 
 export default function StructureInfo() {
   return (
-    <div className="w-[300px]  bg-gray-500/20 space-y-4 rounded-lg p-3">
+    <div className="w-[300px]  bg-gray-500/20 space-y-4 rounded-lg p-3 border-gray-400/50 border">
       <div className="flex items-center gap-2">
         <GiAtomicSlashes size={24} />
 
@@ -20,7 +20,7 @@ export default function StructureInfo() {
 
       <div className="text-gray-400">
         <div className="flex items-center gap-2">
-          <HiUsers />
+          <BsPeople />
           <p>Organism</p>
         </div>
         <p className="italic text-[#ededed]">Homo Sapiens</p>
@@ -46,7 +46,10 @@ export default function StructureInfo() {
       </div>
       <hr className="opacity-10" />
       <div className="text-gray-400">
-        <p>Authors</p>
+        <div className="flex items-center gap-2">
+          <BsBook />
+          <p>Authors</p>
+        </div>
         <p className="text-[#ededed]">Kabby</p>
       </div>
     </div>

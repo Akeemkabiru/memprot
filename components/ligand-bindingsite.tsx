@@ -4,7 +4,7 @@ import { GiMolecule } from "react-icons/gi";
 
 export default function BindingSites() {
   return (
-    <div className="w-[300px] p-3 bg-gray-500/20 space-y-4 h-fit rounded-lg">
+    <div className="w-[300px] p-3 bg-gray-500/20 space-y-4 h-fit rounded-lg border-gray-400/50 border">
       <div className="flex items-center gap-2">
         <GiMolecule size={24} />
         <h2 className="font-semibold text-xl">Ligands & Binding Sites</h2>
