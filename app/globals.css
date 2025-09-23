@@ -1,16 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: linear-gradient(135deg, #0abdc6 0%, #022c43 100%);
+  --background: #0a1a2f;
   --foreground: #171717;
   --dim-opacity: 0.4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: linear-gradient(135deg, #022c43 0%, #0abdc6 100%);
+    --background: #0a1a2f;
     --foreground: #ededed;
-    --dim-opacity: 0.5;
   }
 }
 
@@ -35,7 +34,6 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, var(--dim-opacity));
   pointer-events: none;
   z-index: -1;
 }

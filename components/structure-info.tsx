@@ -13,12 +13,16 @@ export default function StructureInfo() {
       <div className="text-gray-400">
         <div className="flex justify-between items-center ">
           <p>10KC</p>
-          <p>Membrane Protein/GPCR</p>
+          <p className="border-gray-400/50 border px-2  rounded-xl flex items-center justify-center">
+            Membrane Protein/GPCR
+          </p>
         </div>
-        <p className="text-[#ededed]">Grounded state Rhodopsin</p>
+        <p className="text-[#ededed] mt-4 font-medium">
+          Grounded state Rhodopsin
+        </p>
       </div>
 
-      <div className="text-gray-400">
+      <div className="text-gray-400 space-y-1">
         <div className="flex items-center gap-2">
           <BsPeople />
           <p>Organism</p>
@@ -26,8 +30,8 @@ export default function StructureInfo() {
         <p className="italic text-[#ededed]">Homo Sapiens</p>
       </div>
       <hr className="opacity-10" />
-      <div className="grid  grid-cols-2 grid-rows-2 gap-6 justify-between text-gray-400">
-        <div>
+      <div className="grid  grid-cols-2 grid-rows-2 gap-4 justify-between text-gray-400">
+        <div className="space-y-1">
           <p>Resolution</p>
           <p className="text-[#ededed]">2.80 Å</p>
         </div>
@@ -35,17 +39,17 @@ export default function StructureInfo() {
           <p>Deposited</p>
           <p className="text-[#ededed]">2003-05-07</p>
         </div>
-        <div>
+        <div className="space-y-1">
           <p>Chains</p>
           <p className="text-[#ededed]">1</p>
         </div>
-        <div>
+        <div className="space-y-1">
           <p>Ligands</p>
           <p className="text-[#ededed]">1</p>
         </div>
       </div>
       <hr className="opacity-10" />
-      <div className="text-gray-400">
+      <div className="text-gray-400 space-y-1">
         <div className="flex items-center gap-2">
           <BsBook />
           <p>Authors</p>

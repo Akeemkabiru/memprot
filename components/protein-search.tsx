@@ -1,6 +1,6 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
-import { HiDatabase, HiSearch } from "react-icons/hi";
+import { HiDatabase } from "react-icons/hi";
 
 export default function ProteinSearch() {
   return (
@@ -18,7 +18,7 @@ export default function ProteinSearch() {
             placeholder="e.g., 10KC, 3R"
             className="border w-full border-gray-400 h-9 px-2 focus:outline-none rounded-md placeholder:text-gray-400"
           />
-          <div className="bg-[#ff7043] rounded-md p-2.5">
+          <div className="bg-[#05427e] rounded-md p-2.5">
             <BsSearch size={16} />
           </div>
         </div>
@@ -31,12 +31,14 @@ export default function ProteinSearch() {
 
       <div>
         <p className="mb-2">Example Membrane Proteins</p>
-        <div className="flex items-center justify-between bg-black/30 p-3 rounded-lg ">
-          <div>
+        <div className="flex items-center justify-between bg-black/30 p-3 rounded-lg border-gray-400/50 border">
+          <div className="space-y-1">
             <p>1OKC</p>
             <p className="text-gray-400">Rhodopsin</p>
           </div>
-          <div>GPCR</div>
+          <div className="border-gray-400/50 border px-2 rounded-xl flex items-center justify-center">
+            GPCR
+          </div>
         </div>
       </div>
     </div>

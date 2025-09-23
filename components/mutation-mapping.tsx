@@ -1,7 +1,6 @@
 import React from "react";
 import { BsPlus } from "react-icons/bs";
 import { GiDna1 } from "react-icons/gi";
-import { HiPlus } from "react-icons/hi";
 
 export default function MutationMapping() {
   return (
@@ -10,7 +9,7 @@ export default function MutationMapping() {
         <GiDna1 size={24} />
         <h2 className="font-semibold text-xl">Mutation Mapping</h2>
       </div>
-      <div className="bg-black/30 p-3 rounded-lg  ">
+      <div className="bg-black/30 p-3 rounded-lg border-gray-400/50 border  ">
         <p className="mb-4">Add Mutation</p>
         <div className="grid grid-cols-2 grid-rows-2 gap-4">
           <select className="border w-full border-gray-400 h-9 px-2 focus:outline-none rounded-md placeholder:text-gray-400">
@@ -40,7 +39,7 @@ export default function MutationMapping() {
             <option>High impact</option>
           </select>
 
-          <button className="bg-[#ff7043] rounded-md p-2.5">
+          <button className="bg-[#05427e] rounded-md p-2.5">
             <BsPlus size={16} />
           </button>
         </div>
