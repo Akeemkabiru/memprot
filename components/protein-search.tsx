@@ -40,7 +40,7 @@ export default function ProteinSearch() {
             <p>1OKC</p>
             <p className="text-gray-400">Rhodopsin</p>
           </div>
-          <div className="border-gray-400/50 border px-2 rounded-xl flex items-center justify-center">
+          <div className="border-gray-400/50 border px-2 rounded-xl flex items-center justify-center text-[#3db2ff] font-semibold">
             GPCR
           </div>
         </div>

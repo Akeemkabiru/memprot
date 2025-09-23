@@ -14,7 +14,7 @@ export default function Home() {
         <div className="flex items-center gap-x-2">
           <Image src="/logo.png" alt="logo" width={48} height={48} />
           <div className="">
-            <h2 className="font-semibold text-2xl">MemProt Explorer</h2>
+            <h2 className="font-semibold text-2xl">MemProt</h2>
             <p className="text-sm text-gray-400">
               Interactive Membrane Protein Structure Visualization
             </p>

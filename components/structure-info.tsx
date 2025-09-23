@@ -12,7 +12,7 @@ export default function StructureInfo() {
       </div>
       <div className="text-gray-400">
         <div className="flex justify-between items-center ">
-          <p>10KC</p>
+          <p className="text-[#3db2ff] font-semibold">10KC</p>
           <p className="border-gray-400/50 border px-2  rounded-xl flex items-center justify-center">
             Membrane Protein/GPCR
           </p>

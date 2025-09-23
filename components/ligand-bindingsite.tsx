@@ -12,7 +12,7 @@ export default function BindingSites() {
       <div className="space-y-3 bg-black/30 p-3 rounded-lg text-gray-400 border-gray-400/50 border ">
         <div className="flex items-center justify-between">
           <p className="text-[#ededed]">RET</p>
-          <p className="border-gray-400/50 border px-2 rounded-xl flex items-center justify-center text-[#ededed]">
+          <p className="border-gray-400/50 border px-2 rounded-xl flex items-center justify-center text-[#3db2ff] font-semibold">
             Ligand
           </p>
         </div>
