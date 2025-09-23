@@ -39,7 +39,11 @@ export default function MutationMapping() {
             <option>High impact</option>
           </select>
 
-          <button className="bg-[#05427e] rounded-md p-2.5">
+          <button
+            className="px-5 py-2.5 rounded-lg font-semibold transition-all duration-200 
+  bg-gradient-to-r from-cyan-400 to-teal-400 text-white shadow-lg 
+  hover:brightness-110 hover:shadow-cyan-500/40"
+          >
             <BsPlus size={16} />
           </button>
         </div>

@@ -1,15 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a1a2f;
-  --foreground: #171717;
-  --dim-opacity: 0.4;
+  /* Core palette */
+  --background: #0b0f1c; /* deep navy/black */
+  --foreground: #e6f1ff; /* near-white bluish text */
+  --dim-opacity: 0.35;
+
+  /* Accent colors (protein domains, residues, highlights) */
+  --accent-1: #3db2ff; /* cyan */
+  --accent-2: #ff6f61; /* coral/orange */
+  --accent-3: #8be38b; /* green */
+  --accent-4: #d28cff; /* lavender */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a1a2f;
-    --foreground: #ededed;
+    --background: #0b0f1c;
+    --foreground: #f5faff;
   }
 }
 
@@ -36,4 +43,9 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: -1;
+  background: radial-gradient(
+    circle at center,
+    rgba(61, 178, 255, 0.08),
+    /* faint cyan glow */ transparent 70%
+  );
 }

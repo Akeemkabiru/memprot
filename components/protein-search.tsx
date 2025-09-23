@@ -18,7 +18,11 @@ export default function ProteinSearch() {
             placeholder="e.g., 10KC, 3R"
             className="border w-full border-gray-400 h-9 px-2 focus:outline-none rounded-md placeholder:text-gray-400"
           />
-          <div className="bg-[#05427e] rounded-md p-2.5">
+          <div
+            className="px-5 py-2.5 rounded-lg font-semibold transition-all duration-200 
+  bg-gradient-to-r from-cyan-400 to-teal-400 text-white shadow-lg 
+  hover:brightness-110 hover:shadow-cyan-500/40"
+          >
             <BsSearch size={16} />
           </div>
         </div>
