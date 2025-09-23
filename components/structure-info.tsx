@@ -1,52 +1,53 @@
-import Image from "next/image";
 import React from "react";
-import { HiUser, HiUsers } from "react-icons/hi";
+import { GiAtomicSlashes } from "react-icons/gi";
+import { HiUsers } from "react-icons/hi";
 
 export default function StructureInfo() {
   return (
-    <div className="w-[300px] p-2 bg-gray-500/20 space-y-4">
+    <div className="w-[300px]  bg-gray-500/20 space-y-4 rounded-lg p-3">
       <div className="flex items-center gap-2">
-        <Image src="/logo.png" alt="logo" width={24} height={24} />
+        <GiAtomicSlashes size={24} />
+
         <h2 className="font-semibold text-xl">Structure Information</h2>
       </div>
-      <div>
+      <div className="text-gray-400">
         <div className="flex justify-between items-center ">
           <p>10KC</p>
-          <p className="text-sm">Membrane Protein/GPCR</p>
+          <p>Membrane Protein/GPCR</p>
         </div>
-        <p>Grounded state Rhodopsin</p>
+        <p className="text-[#ededed]">Grounded state Rhodopsin</p>
       </div>
 
-      <div>
-        <div>
+      <div className="text-gray-400">
+        <div className="flex items-center gap-2">
           <HiUsers />
           <p>Organism</p>
         </div>
-        <p>Homo Sapiens</p>
+        <p className="italic text-[#ededed]">Homo Sapiens</p>
       </div>
-      <hr />
-      <div className="grid text-sm grid-cols-2 grid-rows-2 gap-6 justify-between ">
+      <hr className="opacity-10" />
+      <div className="grid  grid-cols-2 grid-rows-2 gap-6 justify-between text-gray-400">
         <div>
           <p>Resolution</p>
-          <p>2.80 Å</p>
+          <p className="text-[#ededed]">2.80 Å</p>
         </div>
         <div>
           <p>Deposited</p>
-          <p>2003-05-07</p>
+          <p className="text-[#ededed]">2003-05-07</p>
         </div>
         <div>
           <p>Chains</p>
-          <p>1</p>
+          <p className="text-[#ededed]">1</p>
         </div>
         <div>
           <p>Ligands</p>
-          <p>1</p>
+          <p className="text-[#ededed]">1</p>
         </div>
       </div>
-      <hr />
-      <div>
+      <hr className="opacity-10" />
+      <div className="text-gray-400">
         <p>Authors</p>
-        <p>Kabby</p>
+        <p className="text-[#ededed]">Kabby</p>
       </div>
     </div>
   );
