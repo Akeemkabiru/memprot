@@ -1,7 +1,7 @@
 import BindingSites from "@/components/ligand-bindingsite";
 import MutationMapping from "@/components/mutation-mapping";
 import ProteinSearch from "@/components/protein-search";
-import ProteinStructure from "@/components/protein-structure";
+import { ProteinStructure } from "@/components/protein-structure";
 import StructureInfo from "@/components/structure-info";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,7 +33,7 @@ export default function Home() {
             <ProteinSearch />
             <StructureInfo />
           </div>
-          <ProteinStructure />
+          <ProteinStructure pdbId="2XKC" />
           <div className="space-y-6 h-full overflow-auto">
             <BindingSites />
             <MutationMapping />
