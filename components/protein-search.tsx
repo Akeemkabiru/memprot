@@ -2,7 +2,13 @@ import React from "react";
 import { BsSearch } from "react-icons/bs";
 import { HiDatabase } from "react-icons/hi";
 
-export default function ProteinSearch() {
+export default function ProteinSearch({
+  setPbId,
+  pbId,
+}: {
+  setPbId: (id: string) => void;
+  pbId: string;
+}) {
   return (
     <div className="w-[300px] p-3 bg-gray-500/20 space-y-4 rounded-lg border-gray-400/50 border">
       <div className="flex items-center gap-2">
@@ -14,6 +20,8 @@ export default function ProteinSearch() {
         <p className="font-medium mb-2">PDB ID</p>
         <div className="flex items-center gap-2">
           <input
+            value={pbId}
+            onChange={(e) => setPbId(e.target.value)}
             type="text"
             placeholder="e.g., 10KC, 3R"
             className="border w-full border-gray-400 h-9 px-2 focus:outline-none rounded-md placeholder:text-gray-400"

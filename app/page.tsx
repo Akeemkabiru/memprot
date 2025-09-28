@@ -1,3 +1,5 @@
+"use client";
+
 import BindingSites from "@/components/ligand-bindingsite";
 import MutationMapping from "@/components/mutation-mapping";
 import ProteinSearch from "@/components/protein-search";
@@ -5,9 +7,12 @@ import { ProteinStructure } from "@/components/protein-structure";
 import StructureInfo from "@/components/structure-info";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { BsGithub } from "react-icons/bs";
 
 export default function Home() {
+  const [pbId, setPbId] = useState("");
+
   return (
     <div className="w-full h-screen overflow-hidden flex flex-col">
       <div className="w-full flex justify-between px-6 py-5 border-b border-b-gray-600/90">
@@ -30,10 +35,10 @@ export default function Home() {
       <div className="flex items-center justify-center overflow-hidden flex-1 text-sm  ">
         <div className="w-7xl flex justify-between gap-6 h-full py-6">
           <div className="space-y-6 h-full overflow-auto">
-            <ProteinSearch />
+            <ProteinSearch setPbId={setPbId} pbId={pbId} />
             <StructureInfo />
           </div>
-          <ProteinStructure pdbId="2XKC" />
+          <ProteinStructure pdbId={pbId} />
           <div className="space-y-6 h-full overflow-auto">
             <BindingSites />
             <MutationMapping />
