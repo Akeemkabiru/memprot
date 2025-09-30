@@ -1,14 +1,12 @@
+import { exmapleProtein } from "@/constant";
+import { useProtStore } from "@/store/protstore";
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 import { HiDatabase } from "react-icons/hi";
 
-export default function ProteinSearch({
-  setPbId,
-  pbId,
-}: {
-  setPbId: (id: string) => void;
-  pbId: string;
-}) {
+export default function ProteinSearch() {
+  const { pbID, setPbID } = useProtStore();
+
   return (
     <div className="w-[300px] p-3 bg-gray-500/20 space-y-4 rounded-lg border-gray-400/50 border">
       <div className="flex items-center gap-2">
@@ -20,8 +18,8 @@ export default function ProteinSearch({
         <p className="font-medium mb-2">PDB ID</p>
         <div className="flex items-center gap-2">
           <input
-            value={pbId}
-            onChange={(e) => setPbId(e.target.value)}
+            value={pbID}
+            onChange={(e) => setPbID(e.target.value)}
             type="text"
             placeholder="e.g., 10KC, 3R"
             className="border w-full border-gray-400 h-9 px-2 focus:outline-none rounded-md placeholder:text-gray-400"
@@ -41,17 +39,25 @@ export default function ProteinSearch({
         <div>10KC</div>
       </div>
 
-      <div>
+      <div className="space-y-3 ">
         <p className="mb-2">Example Membrane Proteins</p>
-        <div className="flex items-center justify-between bg-black/30 p-3 rounded-lg border-gray-400/50 border">
-          <div className="space-y-1">
-            <p>1OKC</p>
-            <p className="text-gray-400">Rhodopsin</p>
-          </div>
-          <div className="border-gray-400/50 border px-2 rounded-xl flex items-center justify-center text-[#3db2ff] font-semibold">
-            GPCR
-          </div>
-        </div>
+        {exmapleProtein.map((el) => {
+          return (
+            <div
+              key={el.pdbId}
+              onClick={() => setPbID(el.pdbId)}
+              className="flex items-center justify-between bg-black/30 p-3 rounded-lg cursor-pointer border-gray-400/50 border hover:scale-105 transition-all duration-300"
+            >
+              <div className="space-y-1">
+                <p>{el.pdbId}</p>
+                <p className="text-gray-400">{el.title}</p>
+              </div>
+              <div className="border-gray-400/50 border px-2 rounded-xl flex items-center justify-center text-[#3db2ff] font-semibold">
+                {el.classification}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

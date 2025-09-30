@@ -3,22 +3,14 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Loader2, RotateCcw, ZoomIn, ZoomOut } from "lucide-react";
 import { Stage } from "ngl";
+import { useProtStore } from "@/store/protstore";
 
-interface MolecularViewerProps {
-  pdbId?: string;
-  onLoadComplete?: (structure: unknown) => void;
-  onLoadError?: (error: string) => void;
-}
-
-export function ProteinStructure({
-  pdbId,
-  onLoadComplete,
-  onLoadError,
-}: MolecularViewerProps) {
+export function ProteinStructure() {
   const containerRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<Stage | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const { pbID } = useProtStore();
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -41,61 +33,55 @@ export function ProteinStructure({
   }, []);
 
   /** Load PDB structure */
-  const loadStructure = useCallback(
-    async (id: string) => {
-      if (!stageRef.current) return;
-      setIsLoading(true);
-      setError(null);
+  const loadStructure = useCallback(async (id: string) => {
+    if (!stageRef.current) return;
+    setIsLoading(true);
+    setError(null);
 
-      try {
-        const stage = stageRef.current;
-        stage.removeAllComponents();
+    try {
+      const stage = stageRef.current;
+      stage.removeAllComponents();
 
-        const structure = await stage.loadFile(
-          `https://files.rcsb.org/download/${id}.pdb`,
-          { defaultRepresentation: false }
-        );
+      const structure = await stage.loadFile(
+        `https://files.rcsb.org/download/${id}.pdb`,
+        { defaultRepresentation: false }
+      );
 
-        if (structure) {
-          structure.addRepresentation("cartoon", {
-            colorScheme: "chainname",
-            smoothSheet: true,
-          });
+      if (structure) {
+        structure.addRepresentation("cartoon", {
+          colorScheme: "chainname",
+          smoothSheet: true,
+        });
 
-          structure.addRepresentation("ball+stick", {
-            selection: "ligand",
-            colorScheme: "element",
-            multipleBond: true,
-            radiusScale: 0.8,
-          });
+        structure.addRepresentation("ball+stick", {
+          selection: "ligand",
+          colorScheme: "element",
+          multipleBond: true,
+          radiusScale: 0.8,
+        });
 
-          structure.addRepresentation("surface", {
-            selection: "membrane",
-            opacity: 0.3,
-            colorScheme: "hydrophobicity",
-          });
+        structure.addRepresentation("surface", {
+          selection: "membrane",
+          opacity: 0.3,
+          colorScheme: "hydrophobicity",
+        });
 
-          stage.autoView();
-        }
-
-        onLoadComplete?.(structure);
-      } catch (err) {
-        const errorMessage =
-          err instanceof Error ? err.message : "Failed to load structure";
-        setError(errorMessage);
-        onLoadError?.(errorMessage);
-      } finally {
-        setIsLoading(false);
+        stage.autoView();
       }
-    },
-    [onLoadComplete, onLoadError]
-  );
+    } catch (err) {
+      const errorMessage =
+        err instanceof Error ? err.message : "Failed to load structure";
+      setError(errorMessage);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
-    if (pdbId) {
-      loadStructure(pdbId);
+    if (pbID) {
+      loadStructure(pbID);
     }
-  }, [pdbId, loadStructure]);
+  }, [pbID, loadStructure]);
 
   const resetView = () => stageRef.current?.autoView();
 
