@@ -32,7 +32,6 @@ export function ProteinStructure() {
     };
   }, []);
 
-  /** Load PDB structure */
   const loadStructure = useCallback(async (id: string) => {
     if (!stageRef.current) return;
     setIsLoading(true);
@@ -107,10 +106,10 @@ export function ProteinStructure() {
         <button onClick={resetView}>
           <RotateCcw className="h-5 w-5 cursor-pointer text-white" />
         </button>
-        <button onClick={zoomIn}>
+        <button onClick={zoomOut}>
           <ZoomIn className="h-5 w-5 cursor-pointer text-white" />
         </button>
-        <button onClick={zoomOut}>
+        <button onClick={zoomIn}>
           <ZoomOut className="h-5 w-5 cursor-pointer text-white" />
         </button>
       </div>
