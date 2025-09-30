@@ -11,7 +11,7 @@ import { BsGithub } from "react-icons/bs";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen overflow-hidden flex flex-col">
+    <div className="w-full h-screen lg:overflow-hidden flex flex-col">
       <div className="w-full flex justify-between px-6 py-5 border-b border-b-gray-600/90">
         <div className="flex items-center gap-x-2">
           <Image src="/logo.png" alt="logo" width={48} height={48} />
@@ -29,14 +29,14 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="flex items-center justify-center overflow-hidden flex-1 text-sm  ">
-        <div className="w-7xl flex justify-between gap-6 h-full py-6">
-          <div className="space-y-6 h-full overflow-auto">
+      <div className="flex items-center justify-center lg:overflow-hidden lg:flex-1 text-sm  ">
+        <div className="lg:w-7xl w-full flex lg:flex-row flex-col justify-between gap-6 lg:h-full py-6">
+          <div className="space-y-6 lg:overflow-auto">
             <ProteinSearch />
             <StructureInfo />
           </div>
           <ProteinStructure />
-          <div className="space-y-6 h-full overflow-auto">
+          <div className="space-y-6 lg:overflow-auto">
             <BindingSites />
             <MutationMapping />
           </div>

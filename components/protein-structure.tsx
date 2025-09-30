@@ -100,7 +100,10 @@ export function ProteinStructure() {
 
   return (
     <div className="flex-1 rounded-lg p-4 relative">
-      <div ref={containerRef} className="w-full h-full rounded-lg"></div>
+      <div
+        ref={containerRef}
+        className="w-full lg:h-full h-[400px] rounded-lg"
+      ></div>
 
       <div className="absolute top-6 right-6 flex gap-3">
         <button onClick={resetView}>

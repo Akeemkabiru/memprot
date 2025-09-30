@@ -6,7 +6,6 @@ import { useCallback, useEffect, useState } from "react";
 import { BsBook, BsPeople } from "react-icons/bs";
 import { GiAtomicSlashes } from "react-icons/gi";
 
-// Define minimal types for the fields we use
 interface ProtInformation {
   rcsb_id: string;
   struct_keywords?: {
