@@ -77,7 +77,7 @@ export function ProteinStructure() {
   }, []);
 
   useEffect(() => {
-    if (pbID) {
+    if (pbID && pbID.length >= 4) {
       loadStructure(pbID);
     }
   }, [pbID, loadStructure]);
