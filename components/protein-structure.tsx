@@ -107,13 +107,13 @@ export function ProteinStructure() {
 
       <div className="absolute top-6 right-6 flex gap-3">
         <button onClick={resetView}>
-          <RotateCcw className="h-5 w-5 cursor-pointer text-white" />
+          <RotateCcw size={20} className="cursor-pointer text-white" />
         </button>
         <button onClick={zoomOut}>
-          <ZoomIn className="h-5 w-5 cursor-pointer text-white" />
+          <ZoomIn size={20} className="cursor-pointer text-white" />
         </button>
         <button onClick={zoomIn}>
-          <ZoomOut className="h-5 w-5 cursor-pointer text-white" />
+          <ZoomOut size={20} className="cursor-pointer text-white" />
         </button>
       </div>
 
