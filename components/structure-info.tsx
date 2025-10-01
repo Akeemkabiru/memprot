@@ -88,7 +88,7 @@ export default function StructureInfo() {
             {protInformation.rcsb_id}
           </p>
           <p className="border-gray-400/50 border px-2 rounded-xl flex items-center justify-center">
-            {protInformation.struct_keywords?.pdbx_keywords}
+            {protInformation.struct_keywords?.pdbx_keywords || ""}
           </p>
         </div>
         <p className="text-[#ededed] mt-4 font-medium">

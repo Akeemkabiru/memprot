@@ -17,13 +17,16 @@ export default function Home() {
           <Image src="/logo.png" alt="logo" width={48} height={48} />
           <div className="">
             <h2 className="font-semibold text-2xl">MemProt</h2>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-400 hidden lg:block">
               Interactive Membrane Protein Structure Visualization
             </p>
           </div>
         </div>
 
-        <Link href="" className="flex items-center gap-4">
+        <Link
+          href="https://github.com/Akeemkabiru/memprot"
+          className="flex items-center lg:gap-4 gap-2"
+        >
           <BsGithub />
           <p>Github</p>
         </Link>
