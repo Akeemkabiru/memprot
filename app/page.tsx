@@ -30,7 +30,7 @@ export default function Home() {
       </div>
 
       <div className="flex items-center justify-center lg:overflow-hidden lg:flex-1 text-sm  ">
-        <div className="lg:w-7xl w-full flex lg:flex-row flex-col justify-between gap-6 lg:h-full py-6">
+        <div className="lg:w-7xl w-full flex lg:flex-row flex-col justify-between gap-6 lg:h-full lg:py-6 lg:px-0 p-4  ">
           <div className="space-y-6 lg:overflow-auto">
             <ProteinSearch />
             <StructureInfo />

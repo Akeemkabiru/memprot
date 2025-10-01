@@ -76,7 +76,7 @@ export default function StructureInfo() {
   if (!protInformation) return null;
 
   return (
-    <div className="w-[300px] bg-gray-500/20 space-y-4 rounded-lg p-3 border-gray-400/50 border">
+    <div className="lg:w-[300px] bg-gray-500/20 space-y-4 rounded-lg p-3 border-gray-400/50 border">
       <div className="flex items-center gap-2">
         <GiAtomicSlashes size={24} />
         <h2 className="font-semibold text-xl">Structure Information</h2>

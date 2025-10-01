@@ -4,7 +4,7 @@ import { GiDna1 } from "react-icons/gi";
 
 export default function MutationMapping() {
   return (
-    <div className="w-[300px] p-3 bg-gray-500/20 space-y-4 rounded-lg border-gray-400/50 border">
+    <div className="lg:w-[300px] p-3 bg-gray-500/20 space-y-4 rounded-lg border-gray-400/50 border">
       <div className="flex items-center gap-2">
         <GiDna1 size={24} />
         <h2 className="font-semibold text-xl">Mutation Mapping</h2>
